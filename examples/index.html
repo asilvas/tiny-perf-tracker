@@ -16,7 +16,12 @@
   </body>
   <script>
     const output = document.getElementById('output');
-    tinyPerfLogger(tinyPerfTracker, data => output.innerHTML = JSON.stringify(data, null, 2).replace(/ /g, '&nbsp;').replace(/\n/g, '<br />'), { raw: true });
+    const logger = data => output.innerHTML =
+      JSON.stringify(data, null, 2)
+        .replace(/ /g, '&nbsp;')
+        .replace(/\n/g, '<br />')
+    ;
+    tinyPerfLogger(tinyPerfTracker, { logger, raw: true });
 
     function onButton1() {
       const done = tinyPerfTracker.track('button1');
