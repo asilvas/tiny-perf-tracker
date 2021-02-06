@@ -27,6 +27,7 @@
     "build:node": "microbundle build src/node.js --raw --target node",
     "cover": "serve coverage",
     "examples": "npm run build && echo \"Visit http://localhost:5000/examples\" && serve ./",
+    "prepublish": "npm test && npm run build",
     "prettier": "prettier --write src",
     "test": "npm run unit-cov",
     "unit": "mocha --recursive --require '@babel/register' test/shared test/node",
