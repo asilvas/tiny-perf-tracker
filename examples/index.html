@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tiny-perf-tracker examples</title>
+    <script src="../dist/browser.umd.js"></script>
+    <script src="../dist/logger.umd.js"></script>
+  </head>
+  <body>
+    <button onclick="onButton1()">Button 1 (500ms)</button><br />
+    <button onclick="onButton2()">Button 2 (1000ms)</button><br />
+    <button onclick="onButton3()">Button 3 (Trigger 1 & 2)</button><br />
+    <h2>Output:</h2>
+    <code id="output">
+
+    </code>
+  </body>
+  <script>
+    const output = document.getElementById('output');
+    tinyPerfLogger(tinyPerfTracker, data => output.innerHTML = JSON.stringify(data, null, 2).replace(/ /g, '&nbsp;').replace(/\n/g, '<br />'), { raw: true });
+
+    function onButton1() {
+      const done = tinyPerfTracker.track('button1');
+      setTimeout(done, 500);
+    }
+
+    function onButton2() {
+      const done = tinyPerfTracker.track('button2');
+      setTimeout(done, 1000);
+    }
+
+    function onButton3() {
+      onButton1();
+      onButton2();
+    }
+  </script>
+</html>
