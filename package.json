@@ -35,7 +35,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm build",
+      "pre-commit": "npm test && npm run prettier && npm build",
       "pre-push": "npm test && npm build"
     }
   },
