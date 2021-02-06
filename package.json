@@ -30,8 +30,8 @@
     "prepublish": "npm test && npm run build",
     "prettier": "prettier --write src",
     "test": "npm run unit-cov",
-    "unit": "mocha --recursive --require '@babel/register' test/shared test/node",
-    "unit-cov": "nyc --reporter=html --reporter=text --report=text \"mocha --recursive --require '@babel/register' test/shared test/node\"",
+    "unit": "mocha --recursive --require @babel/register test/shared test/node",
+    "unit-cov": "nyc --reporter=html --reporter=text --report=text -- mocha --recursive --require @babel/register test/shared test/node",
     "watch": "microbundle watch --raw --format cjs"
   },
   "husky": {
