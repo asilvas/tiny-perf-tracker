@@ -1,6 +1,7 @@
 # tiny-perf-tracker
 
 [![License](https://badgen.net/github/license/asilvas/tiny-perf-tracker)](https://github.com/asilvas/tiny-perf-tracker/blob/main/LICENSE)
+[![Version](https://badgen.net/npm/v/tiny-perf-tracker)](https://www.npmjs.com/package/tiny-perf-tracker)
 [![circleci](https://badgen.net/circleci/github/asilvas/tiny-perf-tracker/main)](https://app.circleci.com/pipelines/github/asilvas/tiny-perf-tracker)
 [![coverage](https://badgen.net/codecov/c/github/asilvas/tiny-perf-tracker/main)](https://codecov.io/gh/asilvas/tiny-perf-tracker)
 
