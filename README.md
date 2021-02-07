@@ -1,15 +1,15 @@
 # tiny-perf-tracker
 
-![License](https://badgen.net/github/license/asilvas/tiny-perf-tracker)
-![circleci](https://badgen.net/circleci/github/asilvas/tiny-perf-tracker/main)
-![coverage](https://badgen.net/codecov/c/github/asilvas/tiny-perf-tracker/main)
+[![License](https://github.com/asilvas/tiny-perf-tracker/blob/main/LICENSE)](https://badgen.net/github/license/asilvas/tiny-perf-tracker)
+[![circleci](https://app.circleci.com/pipelines/github/asilvas/tiny-perf-tracker)](https://badgen.net/circleci/github/asilvas/tiny-perf-tracker/main)
+[![coverage](https://codecov.io/gh/asilvas/tiny-perf-tracker)](https://badgen.net/codecov/c/github/asilvas/tiny-perf-tracker/main)
 
 (Tiny) performance tracker for node.js and browser.
 
 This package includes:
 
-* `tiny-perf-tracker` ![Size](https://badgen.net/badgesize/normal/https/unpkg.com/tiny-perf-tracker/dist/browser.js) - Core performance tracker
-* `tiny-perf-tracker/logger` ![Size](https://badgen.net/badgesize/normal/https/unpkg.com/tiny-perf-tracker/dist/logger.js) - Debounced logger for client or server
+* `tiny-perf-tracker` [![Size](https://unpkg.com/tiny-perf-tracker/dist/browser.js)](https://badgen.net/badgesize/normal/https/unpkg.com/tiny-perf-tracker/dist/browser.js) - Core performance tracker
+* `tiny-perf-tracker/logger` [![Size](https://unpkg.com/tiny-perf-tracker/dist/logger.js)](https://badgen.net/badgesize/normal/https/unpkg.com/tiny-perf-tracker/dist/logger.js) - Debounced logger for client or server
 
 
 ## Basic usage
