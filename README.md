@@ -34,7 +34,7 @@ By default, no logger is attached. You can do simple things like:
 console.log(perf.toString());
 ```
 
-or write the results to your own customer logger:
+or write the results to your own custom logger:
 
 ```
 myLogger.write('perf', perf.toJSON());
