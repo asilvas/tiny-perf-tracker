@@ -9,7 +9,7 @@ export function create(opts = {}) {
     triggers: [],
     track,
     fmt,
-    instance,
+    create,
     toString,
     toJSON,
     ...opts,
