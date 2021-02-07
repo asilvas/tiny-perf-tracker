@@ -3,10 +3,8 @@ import { toString } from "./toString";
 import { toJSON } from "./toJSON";
 import { track } from "./track";
 
-const instances = {};
-
-export function instance(name = "$", opts = {}) {
-  const tinyPerfTracker = {
+export function create(opts = {}) {
+  return {
     r: {}, // results
     triggers: [],
     track,
@@ -16,8 +14,4 @@ export function instance(name = "$", opts = {}) {
     toJSON,
     ...opts,
   };
-
-  const i = instances[name] || tinyPerfTracker;
-
-  return (instances[name] = i);
 }

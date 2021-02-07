@@ -1,3 +1,3 @@
-import { instance } from "./instance";
+import { create } from "./create";
 
-export default instance("$", { p: performance });
+export default create({ p: performance });

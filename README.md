@@ -88,3 +88,11 @@ Yes we know, you hate the current output format. That's OK, we've got your OCD c
 perf.fmt = (key, r) => `* perf:${key}> calls:${r.calls}, ms:${r.ms}`;
 ```
 
+
+## New Tracker
+
+If you need to maintain more than one tracker, you can do so via:
+
+```
+const newPerf = perf.create();
+```
