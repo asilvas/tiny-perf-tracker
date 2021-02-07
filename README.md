@@ -26,6 +26,7 @@ console.log(perf.toString());
 
 This signature allows for concurrency without collision since the callback is tied to the original tracker, and not the metric name.
 
+[Live Demo](https://codepen.io/asilvas/pen/WNowOWo)
 
 ## Detached Loggers
 
