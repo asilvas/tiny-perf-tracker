@@ -2,12 +2,18 @@
   "name": "tiny-perf-tracker",
   "version": "0.2.3",
   "description": "Tiny browser+node performance tracker",
-  "main": "dist/node.js",
-  "umd:main": "dist/node.umd.js",
-  "module": "dist/node.esm.js",
-  "esmodule": "dist/node.modern.js",
+  "main": "dist/browser.js",
+  "umd:main": "dist/browser.umd.js",
+  "module": "dist/browser.esm.js",
+  "esmodule": "dist/browser.modern.js",
   "exports": {
     ".": {
+      "browser": "./dist/browser.umd.js",
+      "umd": "./dist/browser.umd.js",
+      "import": "./dist/browser.esm.js",
+      "require": "./dist/browser.js"
+    },
+    "./browser": {
       "browser": "./dist/browser.umd.js",
       "umd": "./dist/browser.umd.js",
       "import": "./dist/browser.esm.js",
@@ -18,6 +24,12 @@
       "umd": "./dist/logger.umd.js",
       "import": "./dist/logger.esm.js",
       "require": "./dist/logger.js"
+    },
+    "./node": {
+      "browser": "./dist/node.modern.js",
+      "umd": "./dist/node.umd.js",
+      "import": "./dist/node.esm.js",
+      "require": "./dist/node.js"
     }
   },
   "scripts": {
@@ -54,6 +66,7 @@
     "url": "https://github.com/asilvas/tiny-perf-tracker/issues"
   },
   "files": [
+    "*.js",
     "src",
     "dist"
   ],

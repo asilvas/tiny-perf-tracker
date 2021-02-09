@@ -74,7 +74,7 @@ perfLogger(perf, { ms: false });
 For node.js there's an additional option for debounced writing of stats to disk:
 
 ```
-import { perf, logger, fileLogger } from 'tiny-perf-tracker';
+import { perf, logger, fileLogger } from 'tiny-perf-tracker/node';
 
 logger(perf, fileLogger('./stats.json'));
 
