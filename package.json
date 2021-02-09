@@ -1,6 +1,6 @@
 {
   "name": "tiny-perf-tracker",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Tiny browser+node performance tracker",
   "main": "dist/core.js",
   "umd:main": "dist/core.umd.js",
