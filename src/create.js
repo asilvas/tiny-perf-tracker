@@ -3,7 +3,7 @@ import { toString } from "./toString";
 import { toJSON } from "./toJSON";
 import { track } from "./track";
 
-export function create(opts = {}) {
+export function create() {
   return {
     r: {}, // results
     triggers: [],
@@ -12,6 +12,6 @@ export function create(opts = {}) {
     create,
     toString,
     toJSON,
-    ...opts,
+    p: window?.performance||eval("require('perf_hooks').performance"), // eval hack to avoid web bundlers looking at node builtin
   };
 }
