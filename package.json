@@ -2,22 +2,16 @@
   "name": "tiny-perf-tracker",
   "version": "0.2.4",
   "description": "Tiny browser+node performance tracker",
-  "main": "dist/browser.js",
-  "umd:main": "dist/browser.umd.js",
-  "module": "dist/browser.esm.js",
-  "esmodule": "dist/browser.modern.js",
+  "main": "dist/core.js",
+  "umd:main": "dist/core.umd.js",
+  "module": "dist/core.esm.js",
+  "esmodule": "dist/core.modern.js",
   "exports": {
     ".": {
-      "browser": "./dist/browser.umd.js",
-      "umd": "./dist/browser.umd.js",
-      "import": "./dist/browser.esm.js",
-      "require": "./dist/browser.js"
-    },
-    "./browser": {
-      "browser": "./dist/browser.umd.js",
-      "umd": "./dist/browser.umd.js",
-      "import": "./dist/browser.esm.js",
-      "require": "./dist/browser.js"
+      "browser": "./dist/core.umd.js",
+      "umd": "./dist/core.umd.js",
+      "import": "./dist/core.esm.js",
+      "require": "./dist/core.js"
     },
     "./logger": {
       "browser": "./dist/logger.modern.js",
@@ -25,18 +19,18 @@
       "import": "./dist/logger.esm.js",
       "require": "./dist/logger.js"
     },
-    "./node": {
-      "browser": "./dist/node.modern.js",
-      "umd": "./dist/node.umd.js",
-      "import": "./dist/node.esm.js",
-      "require": "./dist/node.js"
+    "./fileLogger": {
+      "browser": "./dist/fileLogger.modern.js",
+      "umd": "./dist/fileLogger.umd.js",
+      "import": "./dist/fileLogger.esm.js",
+      "require": "./dist/fileLogger.js"
     }
   },
   "scripts": {
     "build": "npm-run-all --parallel build:*",
-    "build:browser": "microbundle -i src/browser.js -o dist/browser.js --raw --name tinyPerfTracker",
+    "build:core": "microbundle -i src/core.js -o dist/core.js --raw --name tinyPerfTracker",
     "build:logger": "microbundle -i src/logger.js -o dist/logger.js --raw --name tinyPerfLogger",
-    "build:node": "microbundle build src/node.js --raw --target node",
+    "build:fileLogger": "microbundle -i src/fileLogger.js -o dist/fileLogger.js --raw --target node",
     "cover": "serve coverage",
     "examples": "npm run build && echo \"Visit http://localhost:5000/examples\" && serve ./",
     "prepublish": "npm test && npm run build",
@@ -47,8 +41,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm build",
-      "pre-push": "npm test && npm build"
+      "pre-commit": "npm test && npm run build",
+      "pre-push": "npm test && npm run build"
     }
   },
   "repository": {

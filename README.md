@@ -9,7 +9,7 @@
 
 This package includes:
 
-* `tiny-perf-tracker` [![Size](https://badgen.net/badgesize/normal/https/unpkg.com/tiny-perf-tracker/dist/browser.js)](https://unpkg.com/tiny-perf-tracker/dist/browser.js) (uncompressed) - Core performance tracker
+* `tiny-perf-tracker` [![Size](https://badgen.net/badgesize/normal/https/unpkg.com/tiny-perf-tracker/dist/core.js)](https://unpkg.com/tiny-perf-tracker/dist/core.js) (uncompressed) - Core performance tracker
 * `tiny-perf-tracker/logger` [![Size](https://badgen.net/badgesize/normal/https/unpkg.com/tiny-perf-tracker/dist/logger.js)](https://unpkg.com/tiny-perf-tracker/dist/logger.js) (uncompressed) - Debounced logger for client or server
 
 
@@ -74,7 +74,9 @@ perfLogger(perf, { ms: false });
 For node.js there's an additional option for debounced writing of stats to disk:
 
 ```
-import { perf, logger, fileLogger } from 'tiny-perf-tracker/node';
+import perf from 'tiny-perf-tracker';
+import logger from 'tiny-perf-tracker/logger';
+import fileLogger from 'tiny-perf-tracker/fileLogger';
 
 logger(perf, fileLogger('./stats.json'));
 
